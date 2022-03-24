@@ -1,35 +1,13 @@
-let nomb = prompt('dame tu nombre');
-let nomb2 = prompt('dame tu apellido');
+let calif1 = parseInt(prompt("dame 1 numero"));
+let calif2 = parseInt(prompt("dame 1 numero"));
+let calif3 = parseInt(prompt("dame 1 numero"));
+
+let promedio = (calif1+calif2+calif3)/3;
 
 
-function sumar(nomb, nomb2){
-    let suma = nomb + nomb2;
-    return suma;
+
+if (promedio >= 8){
+    document.write(promedio+' '+"felicidades estas aprobado")
+}else{
+    document.write(promedio+' '+"suerte para la otra, no estas aprobado")
 }
-
-document.write(sumar(nomb, nomb2));
-
-
-const sumanombre = (nomb, nomb2) => {
-    return (nomb + nomb2);
-}
-
-document.write(' '+ sumanombre(nomb, nomb2));
-
-
-const ImprimirFrase = nombre =>' '+`hola ${nombre}`; 
-let nombre = 'sebastian';
-
-document.write(ImprimirFrase (nombre));
-
-const carro ={
-    color:'azul',
-    marca: 'nissan',
-    funciones:{
-        acelera:160,
-        frena:0,
-    }
-}
-
-document.write(' '+carro.color);
-document.write(' '+carro.marca);

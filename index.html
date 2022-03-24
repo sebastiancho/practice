@@ -1,14 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tarea</title>
-    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style.css">
+    <title>examen</title>
 </head>
 <body>
-    <h1>TAREA</h1>
-    <script src="index.js"></script>
+ 
+<input type="number" id="n1" placeholder="escribe un numero">
+<input type="number" id="n2" placeholder="escribe otro numero">
+
+
+<br></br>
+<button id="suma">+</button>
+<button id="resta">-</button>
+<button id="multi">*</button>
+<button id="division">/</button>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; <button id="calcular">calcular</button>
+
+
+<!--select  id="op">
+    <Option value="+">suma</Option>
+        <Option value="-">resta</Option>
+        <Option value="*">multipli</Option>
+        <Option value="/">diviison</Option>
+</select-->
+<script>
+
+
+let op;
+document.querySelector('#suma').addEventListener('click', () =>{
+    op = '+';
+});
+document.querySelector('#resta').addEventListener('click', () =>{
+    op = '-';
+});
+document.querySelector('#multi').addEventListener('click', () =>{
+    op = '*';
+});
+document.querySelector('#division').addEventListener('click', () =>{
+    op = '/';
+});
+
+
+
+
+
+document.querySelector('#calcular').addEventListener('click', () =>{
+    const n1 = parseFloat(document.querySelector('#n1').value);
+    const n2 = parseFloat(document.querySelector('#n2').value);
+    //const op = document.querySelector('#op').value;
+    let res;
+    if (op == '+') {
+        res = n1+n2;
+    }else if (op == '-') {
+        res = n1-n2;
+    }else if (op == '*') {
+        res=n1*n2;
+    }else if (op == '/') {
+        res= n1 / n2;
+    }
+    alert(res)
+});
+</script>
+
+
+<h1>promedio</h1>
+<script src="index.js"></script>
 </body>
 </html>
+
